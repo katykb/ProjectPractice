@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link rel="stylesheet" href="./style.css" />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body class="white">
+    <nav class="white">
+      <button
+        class="tablink waves-effect waves-teal btn-flat homeTab"
+        onclick="openTab('home', this)"
+        id="defaultOpen"
+      >
+        Home
+      </button>
+      <button
+        class="tablink waves-effect waves-teal btn-flat foodTab"
+        onclick="openTab('myFoods', this)"
+      >
+        Food List
+      </button>
+      <button
+        class="tablink waves-effect waves-teal btn-flat recipeTab"
+        onclick="openTab('myRecipes', this)"
+      >
+        My Recipes
+      </button>
+    </nav>
+    <form>
+      <div class="input-field">
+        <input
+          id="search"
+          type="search"
+          required
+          placeholder="start your search here..."
+        />
+        <button
+          id="foodSearchButton"
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <div class="row tabRow">
+      <div id="home" class="tabcontent #e0f7fa cyan lighten-5">
+        <h1 id="homeTitle">Home</h1>
+        <p>My most recent searches.</p>
+        <table id="homePageTable" class="responsive-table striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>protein</th>
+              <th>fat</th>
+              <th>sugar</th>
+              <th>carbs</th>
+              <th>calories</th>
+            </tr>
+          </thead>
+          <tbody id="recentSearches">
+            <tr>
+              <td id="name1"></td>
+              <td id="protein1"></td>
+              <td id="fat1"></td>
+              <td id="sugar1"></td>
+              <td id="carb1"></td>
+              <td id="calories1"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="test"></div>
+        <div class="containerRecipes row"></div>
+      </div>
+      <div id="myFoods" class="tabcontent #0097A7 cyan darken-2">
+        <h1>My Foods</h1>
+
+        <p>Saved foods from my search</p>
+        <table class="responsive-table striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>proetein</th>
+              <th>fat</th>
+              <th>sugar</th>
+              <th>carbs</th>
+              <th>calories</th>
+            </tr>
+          </thead>
+          <tbody id="histories">
+            <tr>
+              <td id="name1"></td>
+              <td id="proetein1"></td>
+              <td id="fat1"></td>
+              <td id="sugar1"></td>
+              <td id="carb1"></td>
+              <td id="calories1"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="myRecipes" class="tabcontent #00E5FF cyan accent-3">
+        <h1>My recipes</h1>
+        <p>Saved recipes from my search</p>
+      </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
